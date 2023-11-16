@@ -1,38 +1,78 @@
 .App {
+  margin-top: 10rem;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.table {
+  margin: 0.25rem;
+  font-size: 2rem;
+  width: 80%;
+}
+
+/* Headers */
+.table__headers--container {
+  margin-bottom: 1rem;
+}
+.table__headers th {
+  border: solid 1px rgb(237, 237, 237);
+}
+
+/* Data Rows */
+.table__row td {
+  border: solid 1px rgb(237, 237, 237);
+  margin: 1rem 2rem;
+  padding: 0.25rem 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+/* Styling equal widths for all cols */
+.event-num {
+  width: 5%;
+}
+.date {
+  width: 15%;
+}
+.event {
+  width: 35%;
+}
+.location {
+  width: 25%;
+}
+.time {
+  width: 10%;
+}
+.end {
+  width: 10%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+
+/* ! MEDIA QUERIES START */
+/** note:
+this is where the responsive design comes into play
+this example is only partially responsive and the design breaks at 
+around 600px
+*/
+@media (max-width: 1400px) {
+  .table {
+    font-size: 1.75rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 1050px) {
+  .table {
+    font-size: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 800px) {
+  .table {
+    font-size: 1rem;
   }
 }
